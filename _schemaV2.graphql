@@ -10207,18 +10207,12 @@ enum MyCollectionArtworkSorts {
 
 # A connection to a list of items.
 type MyCollectionConnection {
-  default: Boolean!
-  description: String!
-
   # A list of edges.
   edges: [MyCollectionEdge]
-  includesPurchasedArtworks: Boolean!
-  name: String!
   pageCursors: PageCursors!
 
   # Information to aid in pagination.
   pageInfo: PageInfo!
-  private: Boolean!
   totalCount: Int
 }
 
@@ -10277,6 +10271,8 @@ type MyCollectionEdge {
 }
 
 type MyCollectionInfo {
+  artistsCount: Int!
+  artworksCount: Int!
   default: Boolean!
   description: String!
   includesPurchasedArtworks: Boolean!
